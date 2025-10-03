@@ -1,0 +1,103 @@
+/* === Theme Variables === */
+:root {
+  --bg-color: #f3f4f6;
+  --text-color: #1f2937;
+  --primary-color: #002855;
+  --accent-color: #2563eb;
+  --button-bg: #004080;
+  --button-hover: #0056b3;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #cbd5e1;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1e1e1e;
+  --text-color: #e5e5e5;
+  --primary-color: #00bcd4;
+  --accent-color: #00bcd4;
+  --button-bg: #222;
+  --button-hover: #333;
+  --card-bg: #2a2a2a;
+  --input-bg: #222;
+  --input-border: #444;
+}
+
+/* === Reset & Typography === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+/* === Layouts === */
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar {
+  background-color: var(--primary-color);
+  color: white;
+  width: 220px;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.sidebar h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: white;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #1e3a8a;
+}
+
+/* === Form Elements === */
+input, textarea, select {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  padding: 0.5rem;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
